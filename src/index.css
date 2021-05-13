@@ -1,0 +1,425 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-green: rgb(53, 158, 85);
+  --primary-dark-green: rgb(25, 112, 51);
+  --primary-light: rgb(255, 244, 230);
+  --primary-dark:  rgba(0,0,0,0.85);
+  --primaty-grey:  rgb(86, 83, 83);
+
+}
+
+/* 
+ html {
+  font-size: 10px;
+  margin: 0;
+  height: 100%;
+  font-family: galano_grotesque,Helvetica Neue,Helvetica,Arial,Sans,sans-serif;
+}
+
+@media (max-width: 600px) { 
+  html {
+    font-size: 7px;
+  }
+  div.card {
+    width: 70vw;
+    font-size: 10px;
+  }
+  .nutrition-card > ul { 
+    grid-template-columns: repeat(3, minmax(10rem, 1fr) )!important;
+    margin: 3rem;
+  }
+  div > .nutrition-card {
+    font-size: 9px;
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  .site-header > div {
+    font-size: 10px;
+  }
+
+  footer.site-footer > div{
+    font-size: 7px;
+  }
+  .form {
+   width: 90%;
+   margin: auto;
+  }
+  .app {
+    width: 100vh;
+    height: 100vh;
+
+  }
+}
+@media (max-width: 700px) { 
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 800px) { 
+  html {
+    font-size: 9px;
+  }
+}
+ @media (min-width: 1400px) { 
+  html {
+    font-size: 13px;
+  }
+  .app {
+    height: 100vh;
+  }
+ }
+ @media (min-width: 1300px) { 
+  html {
+    font-size: 11px;
+  }
+  .app {
+    height: 100vh;
+  }
+ }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(244,244,244);
+  color: #333;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+
+.container {
+  background-color: rgb(255, 244, 230);;
+  grid-area: main;
+  min-height: 77vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+}
+.title {
+  font-size: 4.4rem;
+  text-align: center
+}
+
+.form {
+  display:grid;
+  max-width: 80vw;
+  margin: auto; 
+  padding: 3rem;
+}
+
+ .label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  text-transform:capitalize;
+  color:rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.input {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  padding: 0.5rem 2rem;
+  line-height: 2.8rem;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color: rgba(0,0,0,0.85);
+  color: white;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(0,0,0,0.75);
+  border-radius: 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-top: 5px;
+  outline: none;
+  transition: background-color 250ms;
+}
+
+.button:hover {
+  background-color: rgb(53, 158, 85);
+  border: 1px solid rgb(48, 153, 71);
+}
+  
+.input {
+  margin-bottom: 0;
+  padding-left: 5rem;
+}
+
+div.site-header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  color: rgb(86, 83, 83);
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  grid-area: header;
+  min-height: auto;
+
+}
+.site-header  > div {
+  text-transform: lowercase;
+  margin: 10px 20px;
+  text-decoration: none;
+  justify-content: center;
+  cursor: pointer;
+}
+
+footer.site-footer {
+  display: flex;
+  background-color: rgba(34, 34, 34);
+  color: rgb(255, 244, 230);
+  font-size: 1.3rem;
+  align-items: center;
+  grid-area: footer;
+  min-height: 10vh;
+  width:100%; 
+}
+
+ .card {
+  align-items: center;
+  place-self: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 36rem;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 1px 8px 3px rgba(34, 60, 80, 0.2); 
+  -moz-box-shadow: 0px 1px 8px 3px rgba(34, 60, 80, 0.2); 
+  box-shadow: 0px 1px 8px 3px rgba(34, 60, 80, 0.2);
+}
+.card-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  column-gap: 4rem;
+  row-gap: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(33rem, 1fr) );
+}
+.ingr {
+  padding-bottom: 2rem;
+  font-size: 1.2rem;
+  margin: 1.5rem;
+}
+
+img {
+  height: 26rem;
+  width: auto;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas: 
+                      'header'
+                      'main'
+                      'footer';
+  grid-template-rows: 10rem auto 5rem;
+  grid-template-columns: 100%;
+}
+
+.caret {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+.caret > div{
+  font-size: 1rem;
+}
+.icon {
+  font-size: 2rem;
+  font-weight: 900;
+  position: absolute;
+  margin-top: 3.5rem;
+  margin-left: 1.8rem;
+}
+
+.main-component {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas: 
+                      'header'
+                      'main'
+                      'footer';
+  grid-template-rows: 10rem auto 5rem;
+  grid-template-columns: 100%;
+}
+img.food {
+  margin: 0 auto;
+  size: 80vh;
+}
+
+.error > .error404 {
+  color: rgb(184, 36, 36);
+  font-size: 15rem;
+  margin: 0 auto;
+  font-family: 'Train One', cursive;
+  padding-bottom: 2rem;
+  font-weight: 600;
+  margin-bottom: -5rem;
+}
+
+div.error {
+  margin: auto;
+  display: grid;
+  color:rgb(101, 148, 123);
+  place-content: center;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 2rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.error > div:last-child {
+  justify-self: center;
+  height: 5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.error> div:last-child:hover {
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: rgb(119, 172, 134);
+}
+
+.nutrition-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-self: center;
+  margin: 2rem auto;
+  height: auto;
+  width: 65vw;
+  padding: 3rem;
+  font-size: 1.5rem;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 1px 8px 3px rgba(34, 60, 80, 0.2); 
+  -moz-box-shadow: 0px 1px 8px 3px rgba(34, 60, 80, 0.2); 
+  box-shadow: 0px 1px 8px 3px rgba(34, 60, 80, 0.2);
+}
+.noresult {
+  display: flex;
+  width: 100%;
+  height: 35vh;
+  font-size: 2rem;
+  font-weight: 900;
+  background-color: rgb(255, 255, 255, 0.6);
+  color:black;
+}
+
+.noresult > div {
+  margin: auto 0;
+}
+
+.nutrition-card > div, p {
+ margin: auto;
+ font-size: 2rem;
+}
+.nutrition-card > div {
+  font-size: 1rem;
+  padding-top: 1rem;
+  text-decoration: underline 1px rgb(204, 207, 204);
+}
+.nutrition-card > ul {
+  display: grid;
+  align-items: center;
+  font-size: 1.5rem;
+  grid-template-columns: repeat( 4, minmax(10rem, 1fr) );
+  column-gap: 3rem;
+  row-gap: 3rem;
+  padding: 1rem;
+}
+
+  ul.nutrition > li {
+  display: table-cell;
+  text-align: center;
+  vertical-align: center;
+}
+ .icons > a  {
+  color: white;
+  font-size: 2rem;
+  margin-left: 2rem;
+  text-decoration: none;
+}
+
+.icons {
+  display: flex;
+  margin-left: auto;
+  margin-right: 4rem;
+}
+
+.iri {
+  display: flex;
+  font-size: 1.2rem;
+  flex-direction: column;
+  margin-left: 3rem;
+}
+
+.MuiLinearProgress-root {
+  background-color: rgb(53, 158, 85, 0.5)!important;
+  height: 9px!important;
+  border-radius: 10px!important;
+}
+.MuiLinearProgress-barColorPrimary {
+  background-color: rgb(44, 130, 187)!important;
+
+}
+.MuiTypography-colorPrimary {
+  color: black!important;
+}
+
+div.loading  {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(53, 158, 85, 0.5);
+}
+
+.container > .noresult {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.container > .noresult > div:not(:first-child):hover {
+  color: rgb(25, 112, 51);
+}
+
+ul.pagination-list {
+  display: flex;
+  justify-content: center;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
+font-size: 2rem; 
+}  */
