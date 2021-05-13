@@ -16,4 +16,7 @@ Query examples: '100 gram beef', '30 gr chicken liver', '5 oz almonds', '2 slice
 
 Home page in progress, soon information will be added - recipes of different dishtypes, like breakfast ideas, dishes with eggs, sandwiches etc, not decided yet 😅.
 
-If you have any questions or ideas, please contact me  - turenko7irina@mail.ru, will be happy to hear your feedback.
+If you have any questions or ideas, please contact me  - turenko7irina@mail.ru, will be happy to know your feedback.
+
+
+This is version 2.0 of this app using the consept 'mobile first', want to make my css up to date and app more adaptive and enhance ux.
