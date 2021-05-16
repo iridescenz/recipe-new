@@ -9,90 +9,9 @@
   --primary-dark:  rgba(0,0,0,0.85);
   --primaty-grey:  rgb(86, 83, 83);
 }
-
-
-
-/* 
- html {
+html {
   font-size: 10px;
-  margin: 0;
-  height: 100%;
-  font-family: galano_grotesque,Helvetica Neue,Helvetica,Arial,Sans,sans-serif;
 }
-
-@media (max-width: 600px) { 
-  html {
-    font-size: 7px;
-  }
-  div.card {
-    width: 70vw;
-    font-size: 10px;
-  }
-  .nutrition-card > ul { 
-    grid-template-columns: repeat(3, minmax(10rem, 1fr) )!important;
-    margin: 3rem;
-  }
-  div > .nutrition-card {
-    font-size: 9px;
-    margin: 1rem auto;
-    width: 90%;
-  }
-
-  .site-header > div {
-    font-size: 10px;
-  }
-
-  footer.site-footer > div{
-    font-size: 7px;
-  }
-  .form {
-   width: 90%;
-   margin: auto;
-  }
-  .app {
-    width: 100vh;
-    height: 100vh;
-
-  }
-}
-@media (max-width: 700px) { 
-  html {
-    font-size: 8px;
-  }
-}
-
-@media (min-width: 700px) and (max-width: 800px) { 
-  html {
-    font-size: 9px;
-  }
-}
- @media (min-width: 1400px) { 
-  html {
-    font-size: 13px;
-  }
-  .app {
-    height: 100vh;
-  }
- }
- @media (min-width: 1300px) { 
-  html {
-    font-size: 11px;
-  }
-  .app {
-    height: 100vh;
-  }
- }
-body {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(244,244,244);
-  color: #333;
-}
-
-p {
-  font-size: 1.6rem;
-}
-
 
 .container {
   background-color: rgb(255, 244, 230);;
@@ -115,7 +34,17 @@ p {
   padding: 3rem;
 }
 
- .label {
+.logo > img{
+  width: 10rem;
+  height: 10rem;
+}
+header {
+  display: flex;
+  width:100%;
+  height: fit-content;
+}
+
+ /* .label {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -423,4 +352,4 @@ ul.pagination-list {
 
 button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
 font-size: 2rem; 
-}  */
+}   */

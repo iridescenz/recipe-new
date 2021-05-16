@@ -6,7 +6,7 @@ const headerStyle = { color: 'inherit', textDecoration: 'inherit'};
 const Header = () => {
   const [toggleMenu, setToggleMenu] = useState('none')
 	return (
-    <div className='container'>
+    <div className='header-container'>
       <div className='left-col' style={{display: toggleMenu}}>
         <nav>
           <ul>
@@ -34,7 +34,7 @@ const Header = () => {
         </nav>
       </div>
       <header>
-        <p className='logo'>Logo</p>
+        <p className='logo'><img src='logo.png'/></p>
         <GrMenu onClick={() => toggleMenu ==='none' ? setToggleMenu('block') : setToggleMenu('none')}/>
       </header>
     </div>
